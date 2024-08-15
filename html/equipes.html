@@ -1,0 +1,324 @@
+<!DOCTYPE html> <!-- indique que le fichier est une page Web HTML, le navigateur interpretera le fichier selon le doctype -->
+<html id="html1"> <!--balise qui indique le debut du code en html-->
+	<head>	<!-- section indiquant les informations d'en tête, ici le type d'encodage utilisé et lien reliant la feuille de style css -->	
+             <meta charset="utf-8"/>	
+             <link rel="stylesheet" href="D:\asmdtt\v2\css\index.css"/>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+			 <link rel="icon" type="image/png" href="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L2pvYjk0Ny0yMjMucG5n.png" sizes="32x32"> 
+
+	</head><!-- les balises fermantes sont toutes faites sur ce format "</>" et indiquent la fin de la section -->
+
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="inscriptions.html">Inscriptions</a>
+  <a href="contact.html">Contact</a>
+  <a href="equipes.html">équipes</a>
+  <a href="résultats.html">Résultats</a>
+  <a href="apropos.html">à propos</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- Tab links -->
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Adultes')">Adultes</button>
+  <button class="tablinks" onclick="openCity(event, 'Enfants')">Enfants</button>
+</div>
+
+<!-- Tab content -->
+<div id="Adultes" class="tabcontent">
+  <div class="tab">
+  <h3>équipes adultes</h3>
+  <button class="tablinks1" onclick="openCity(event, 'equipe1')">équipe 1</button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe2')">équipe 2</button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe3')">équipe 3</button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe4')">équipe 4</button>
+</div>
+</div>
+
+<div id="equipe1" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe adultes 1</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">Frédéric</td>
+  		<td style="width:20%">Kerlan</td>
+  	</tr>
+  	<tr>
+  		<td>Rémi</td>
+  		<td>Lefebvre</td>
+  	</tr>
+  	<tr>
+  		<td>François</td>
+  		<td>Retho</td>
+  	</tr>
+  	<tr>
+  		<td>Alexandre</td>
+  		<td>Batt</td>
+  	</tr>
+  </table>
+</center>
+</div>
+</div>
+
+<div id="equipe2" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe adultes 2</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">Alain</td>
+  		<td style="width:20%">Canon</td>
+  	</tr>
+  	<tr>
+  		<td>Didier</td>
+  		<td>Lefebvre</td>
+  	</tr>
+  	<tr>
+  		<td>Cristopher</td>
+  		<td>Pigout</td>
+  	</tr>
+  	<tr>
+  		<td>Luc</td>
+  		<td>Nougayrede</td>
+  	</tr>
+  </table>
+</center>
+  
+</div>
+</div>
+
+<div id="equipe3" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe adultes 3</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">Alain</td>
+  		<td style="width:20%">Canon</td>
+  	</tr>
+  	<tr>
+  		<td>Didier</td>
+  		<td>Lefebvre</td>
+  	</tr>
+  	<tr>
+  		<td>Cristopher</td>
+  		<td>Pigout</td>
+  	</tr>
+  	<tr>
+  		<td>Luc</td>
+  		<td>Nougayrede</td>
+  	</tr>
+  </table>
+</center>
+  
+</div>
+</div>
+<div id="equipe3" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe adultes 3</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">Alain</td>
+  		<td style="width:20%">Canon</td>
+  	</tr>
+  	<tr>
+  		<td>Didier</td>
+  		<td>Lefebvre</td>
+  	</tr>
+  	<tr>
+  		<td>Cristopher</td>
+  		<td>Pigout</td>
+  	</tr>
+  	<tr>
+  		<td>Luc</td>
+  		<td>Nougayrede</td>
+  	</tr>
+  </table>
+</center>
+  
+</div>
+</div>
+<div id="equipe4" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe adulte 4</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">Alain</td>
+  		<td style="width:20%">Canon</td>
+  	</tr>
+  	<tr>
+  		<td>philippe</td>
+  		<td>Gruin</td>
+  	</tr>
+  	<tr>
+  		<td>Florence</td>
+  		<td>Canon</td>
+  	</tr>
+  	<tr>
+  		<td>Camille</td>
+  		<td>Frank</td>
+  	</tr>
+  	<tr>
+  		<td>Yvon</td>
+  		<td>Billiou</td>
+  	</tr>
+  	<tr>
+  		<td>Cristophe</td>
+  		<td>Grelaud</td>
+  	</tr>
+  	<tr>
+  		<td>Maylis</td>
+  		<td>Batt</td>
+  	</tr>
+  	<tr>
+  		<td>Nicolas</td>
+  		<td>Batt</td>
+  	</tr>
+  </table>
+</center>
+  
+</div>
+</div>
+<!--enfants sous tab-->
+<div id="Enfants" class="tabcontent">
+  <div class="tab">
+  <h3>équipes Enfants (19-11 ans)</h3>
+  <button class="tablinks1" onclick="openCity(event, 'equipe21')">Junior</button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe22')">Cadets 1 </button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe23')">Cadets 2</button>
+  <button class="tablinks1" onclick="openCity(event, 'equipe24')">Minimes</button>
+</div>
+</div>
+<div id="equipe21" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe Junior</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">nom</td>
+  		<td style="width:20%">prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>Prénom</td>
+  	</tr>
+  </table>
+</center>
+</div>
+</div>
+<div id="equipe22" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe Cadets 1</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">nom</td>
+  		<td style="width:20%">prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>Prénom</td>
+  	</tr>
+  </table>
+</center>
+</div>
+</div>
+
+<div id="equipe23" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe Cadets 2</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">nom</td>
+  		<td style="width:20%">prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>Prénom</td>
+  	</tr>
+  </table>
+</center>
+</div>
+</div>
+
+<div id="equipe24" class="tabcontent">
+  <div class="tab">
+  <center>
+  <h3>équipe Minimes</h3>
+  <table id="tableequipe"style="width:40%">
+  	<tr>
+  		<td style="width:20%">nom</td>
+  		<td style="width:20%">prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>prénom</td>
+  	</tr>
+  	<tr>
+  		<td>nom</td>
+  		<td>Prénom</td>
+  	</tr>
+  </table>
+</center>
+</div>
+</div>
+
+
+<script type="text/javascript">function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}</script>
