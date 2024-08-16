@@ -5,6 +5,34 @@
              <link rel="stylesheet" href="css\index.css"/>
              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 			 <link rel="icon" type="image/png" href="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L2pvYjk0Ny0yMjMucG5n.png" sizes="32x32"> 
+			 <style>
+				/* Basic styles for tabs */
+				.tab {
+					display: inline-block;
+					padding: 10px;
+					cursor: pointer;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					margin-right: 5px;
+				}
+				.tab.active {
+					background-color: #007bff;
+					color: white;
+				}
+				.tab-content {
+					display: none;
+					margin-top: 10px;
+				}
+				.tab-content.active {
+					display: block;
+				}
+				.team-content {
+					margin-top: 10px;
+					padding: 10px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+				}
+			</style>
 
 	</head><!-- les balises fermantes sont toutes faites sur ce format "</>" et indiquent la fin de la section -->
 
@@ -21,286 +49,83 @@
     <i class="fa fa-bars"></i>
   </a>
 </div>
+body>
 
-<!-- Tab links -->
+    <!-- Group Tabs -->
+    <div id="groupTabs">
+        <div class="tab active" onclick="showGroup('group1')">Group 1</div>
+        <div class="tab" onclick="showGroup('group2')">Group 2</div>
+    </div>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Adultes')">Adultes</button>
-  <button class="tablinks" onclick="openCity(event, 'Enfants')">Enfants</button>
-</div>
+    <!-- Teams Tabs -->
+    <div id="teamsTabs">
+        <div id="group1" class="tab-content active">
+            <div class="tab" onclick="showTeam('teamsA')">Teams A</div>
+            <div class="tab" onclick="showTeam('teamsB')">Teams B</div>
+        </div>
+        <div id="group2" class="tab-content">
+            <div class="tab" onclick="showTeam('teamsC')">Teams C</div>
+            <div class="tab" onclick="showTeam('teamsD')">Teams D</div>
+        </div>
+    </div>
 
-<!-- Tab content -->
-<div id="Adultes" class="tabcontent">
-  <div class="tab">
-  <h3>équipes adultes</h3>
-  <button class="tablinks1" onclick="openCity(event, 'equipe1')">équipe 1</button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe2')">équipe 2</button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe3')">équipe 3</button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe4')">équipe 4</button>
-</div>
-</div>
+    <!-- Team Content -->
+    <div id="teamContent" class="team-content">
+        <!-- Content will be displayed here -->
+    </div>
 
-<div id="equipe1" class="tabcontent">
-  <div class="tab">
-  	<center>
-	</center>	
-</div>
-</div>
+    <script>
+        // Function to show the selected group tabs and default team tab
+        function showGroup(group) {
+            // Hide all team tabs
+            document.querySelectorAll('#teamsTabs .tab-content').forEach(div => {
+                div.classList.remove('active');
+            });
+            document.getElementById(group).classList.add('active');
 
-<div id="equipe2" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe adultes 2</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">Alain</td>
-  		<td style="width:20%">Canon</td>
-  	</tr>
-  	<tr>
-  		<td>Didier</td>
-  		<td>Lefebvre</td>
-  	</tr>
-  	<tr>
-  		<td>Cristopher</td>
-  		<td>Pigout</td>
-  	</tr>
-  	<tr>
-  		<td>Luc</td>
-  		<td>Nougayrede</td>
-  	</tr>
-  </table>
-</center>
-  
-</div>
-</div>
+            // Remove active class from all group tabs
+            document.querySelectorAll('#groupTabs .tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`#groupTabs .tab[onclick="showGroup('${group}')"]`).classList.add('active');
 
-<div id="equipe3" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe adultes 3</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">Alain</td>
-  		<td style="width:20%">Canon</td>
-  	</tr>
-  	<tr>
-  		<td>Didier</td>
-  		<td>Lefebvre</td>
-  	</tr>
-  	<tr>
-  		<td>Cristopher</td>
-  		<td>Pigout</td>
-  	</tr>
-  	<tr>
-  		<td>Luc</td>
-  		<td>Nougayrede</td>
-  	</tr>
-  </table>
-</center>
-  
-</div>
-</div>
-<div id="equipe3" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe adultes 3</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">Alain</td>
-  		<td style="width:20%">Canon</td>
-  	</tr>
-  	<tr>
-  		<td>Didier</td>
-  		<td>Lefebvre</td>
-  	</tr>
-  	<tr>
-  		<td>Cristopher</td>
-  		<td>Pigout</td>
-  	</tr>
-  	<tr>
-  		<td>Luc</td>
-  		<td>Nougayrede</td>
-  	</tr>
-  </table>
-</center>
-  
-</div>
-</div>
-<div id="equipe4" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe adulte 4</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">Alain</td>
-  		<td style="width:20%">Canon</td>
-  	</tr>
-  	<tr>
-  		<td>philippe</td>
-  		<td>Gruin</td>
-  	</tr>
-  	<tr>
-  		<td>Florence</td>
-  		<td>Canon</td>
-  	</tr>
-  	<tr>
-  		<td>Camille</td>
-  		<td>Frank</td>
-  	</tr>
-  	<tr>
-  		<td>Yvon</td>
-  		<td>Billiou</td>
-  	</tr>
-  	<tr>
-  		<td>Cristophe</td>
-  		<td>Grelaud</td>
-  	</tr>
-  	<tr>
-  		<td>Maylis</td>
-  		<td>Batt</td>
-  	</tr>
-  	<tr>
-  		<td>Nicolas</td>
-  		<td>Batt</td>
-  	</tr>
-  </table>
-</center>
-  
-</div>
-</div>
-<!--enfants sous tab-->
-<div id="Enfants" class="tabcontent">
-  <div class="tab">
-  <h3>équipes Enfants (19-11 ans)</h3>
-  <button class="tablinks1" onclick="openCity(event, 'equipe21')">Junior</button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe22')">Cadets 1 </button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe23')">Cadets 2</button>
-  <button class="tablinks1" onclick="openCity(event, 'equipe24')">Minimes</button>
-</div>
-</div>
-<div id="equipe21" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe Junior</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">nom</td>
-  		<td style="width:20%">prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>Prénom</td>
-  	</tr>
-  </table>
-</center>
-</div>
-</div>
-<div id="equipe22" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe Cadets 1</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">nom</td>
-  		<td style="width:20%">prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>Prénom</td>
-  	</tr>
-  </table>
-</center>
-</div>
-</div>
+            // Reset content
+            document.getElementById('teamContent').innerHTML = '';
 
-<div id="equipe23" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe Cadets 2</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">nom</td>
-  		<td style="width:20%">prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>Prénom</td>
-  	</tr>
-  </table>
-</center>
-</div>
-</div>
+            // Set default active team tab
+            if (group === 'group1') {
+                showTeam('teamsA');
+            } else if (group === 'group2') {
+                showTeam('teamsC');
+            }
+        }
 
-<div id="equipe24" class="tabcontent">
-  <div class="tab">
-  <center>
-  <h3>équipe Minimes</h3>
-  <table id="tableequipe"style="width:40%">
-  	<tr>
-  		<td style="width:20%">nom</td>
-  		<td style="width:20%">prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>prénom</td>
-  	</tr>
-  	<tr>
-  		<td>nom</td>
-  		<td>Prénom</td>
-  	</tr>
-  </table>
-</center>
-</div>
-</div>
+        // Function to show the selected team content
+        function showTeam(team) {
+            let teamContent = '';
+            if (team === 'teamsA') {
+                teamContent = '<h2>Teams A Content</h2><p>Details about Teams A.</p>';
+            } else if (team === 'teamsB') {
+                teamContent = '<h2>Teams B Content</h2><p>Details about Teams B.</p>';
+            } else if (team === 'teamsC') {
+                teamContent = '<h2>Teams C Content</h2><p>Details about Teams C.</p>';
+            } else if (team === 'teamsD') {
+                teamContent = '<h2>Teams D Content</h2><p>Details about Teams D.</p>';
+            }
+
+            document.getElementById('teamContent').innerHTML = teamContent;
+
+            // Highlight the selected team tab
+            document.querySelectorAll('#teamsTabs .tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`#teamsTabs .tab[onclick="showTeam('${team}')"]`).classList.add('active');
+        }
+
+        // Initialize by showing Group 1 and its default team tab
+        showGroup('group1');
+    </script>
+</body>
+</html>
 
 
-<script type="text/javascript">function openCity(evt, cityName) {
-	// Declare all variables
-	var i, tabcontent, tablinks;
-  
-  
-	// Get all elements with class="tabcontent" and hide them
-	tabcontent = document.getElementsByClassName("tabcontent");
-	for (i = 0; i < tabcontent.length; i++) {
-	  tabcontent[i].style.display = "none";
-	}
-  
-	// Get all elements with class="tablinks" and remove the class "active"
-	tablinks = document.getElementsByClassName("tablinks");
-	for (i = 0; i < tablinks.length; i++) {
-	  tablinks[i].className = tablinks[i].className.replace(" active", "");
-	}
-  
-	// Show the current tab, and add an "active" class to the button that opened the tab
-	document.getElementById(cityName).style.display = "block";
-	evt.currentTarget.className += " active";
-  }</script>
-  </body>
